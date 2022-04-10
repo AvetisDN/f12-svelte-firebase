@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  h1:focus,
+  h2:focus,
+  h3:focus,
+  h4:focus,
+  h5:focus,
+  h6:focus {
+    @apply outline-none;
+  }
+  a,
+  button {
+    @apply transition-colors;
+  }
+  a {
+    @apply font-semibold hover:text-primary-focus;
+  }
+  .page {
+    @apply bg-base-200 flex-grow p-4 rounded-xl shadow-xl;
+  }
+  .nav-link {
+    @apply flex rounded-lg transition-all items-center p-2 gap-2;
+  }
+  .nav-link:hover,
+  .nav-link.active {
+    @apply bg-base-100 shadow-md text-primary-focus;
+  }
+  .nav-link__icon {
+    @apply w-8 h-8 flex items-center justify-center bg-primary-focus rounded-md text-base-100 transition-all opacity-0 scale-0;
+  }
+  .nav-link:hover .nav-link__icon,
+  .nav-link.active .nav-link__icon {
+    @apply opacity-100 scale-100;
+  }
+  .nav-link__icon span {
+    @apply text-xl;
+  }
+  [data-theme="garden"] .bg {
+    background-image: url("/images/stacked-waves-haikei.svg");
+    background-size: cover;
+  }
+  [data-theme="halloween"] .bg {
+    background-image: url("/images/stacked-waves-haikei-dark.svg");
+    background-size: cover;
+  }
+}
