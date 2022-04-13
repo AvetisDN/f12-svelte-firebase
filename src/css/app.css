@@ -29,15 +29,28 @@
     @apply bg-base-100 shadow-md text-primary-focus;
   }
   .nav-link__icon {
-    @apply w-8 h-8 flex items-center justify-center bg-primary-focus rounded-md text-base-100 transition-all opacity-0 scale-0;
+    @apply w-8 h-8 flex items-center justify-center rounded-md text-primary-focus transition-all relative;
   }
-  .nav-link:hover .nav-link__icon,
-  .nav-link.active .nav-link__icon {
-    @apply opacity-100 scale-100;
+  .nav-link__icon::before {
+    @apply absolute top-0 left-0 w-8 h-8 rounded-md transition-all bg-primary-focus opacity-0 scale-0;
+    content: "";
   }
   .nav-link__icon span {
-    @apply text-xl;
+    @apply relative text-xl;
   }
+  .nav-link:hover .nav-link__icon::before,
+  .nav-link.active .nav-link__icon::before {
+    @apply opacity-100 scale-100;
+  }
+  .nav-link:hover .nav-link__icon span,
+  .nav-link.active .nav-link__icon span {
+    @apply text-base-100;
+  }
+
+  .post-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
   [data-theme="garden"] .bg {
     background-image: url("/images/stacked-waves-haikei.svg");
     background-size: cover;

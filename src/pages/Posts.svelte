@@ -1,4 +1,4 @@
 <script>
 </script>
 
-<div>Posts page</div>
+<div>My Posts page</div>

@@ -23,14 +23,6 @@
           Home
         </div>
       </Link>
-      <Link to="/posts">
-        <div class="nav-link" class:active={$location.pathname === "/posts"}>
-          <div class="nav-link__icon">
-            <span class="material-icons-round"> view_list </span>
-          </div>
-          Posts
-        </div>
-      </Link>
       <div class="divider my-1 hidden lg:flex">
         <span class="material-icons-round text-base opacity-40">
           account_box
@@ -42,6 +34,22 @@
             <span class="material-icons-round"> manage_accounts </span>
           </div>
           Profile
+        </div>
+      </Link>
+      <Link to="/create">
+        <div class="nav-link" class:active={$location.pathname === "/create"}>
+          <div class="nav-link__icon">
+            <span class="material-icons-round"> note_add </span>
+          </div>
+          Create post
+        </div>
+      </Link>
+      <Link to="/posts">
+        <div class="nav-link" class:active={$location.pathname === "/posts"}>
+          <div class="nav-link__icon">
+            <span class="material-icons-round"> view_list </span>
+          </div>
+          My Posts
         </div>
       </Link>
     </nav>

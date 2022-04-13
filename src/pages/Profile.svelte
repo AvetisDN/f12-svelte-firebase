@@ -56,7 +56,7 @@
 </script>
 
 <form on:submit|preventDefault={submit}>
-  <h2 class="text-xl font-bold flex gap-2 items-center">
+  <h1 class="text-xl font-bold flex gap-2 items-center">
     Profile
     <span class="text-primary-focus">{$globalUser.displayName}</span>
     {#if $globalUser.providerData[0].providerId === "google.com"}
@@ -88,7 +88,7 @@
         </svg>
       </div>
     {/if}
-  </h2>
+  </h1>
   <div class="divider" />
   <div class="flex">
     <div>
