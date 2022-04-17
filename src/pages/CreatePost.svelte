@@ -15,6 +15,8 @@
         created: moment().utc().unix(),
         authorName: $globalUser.displayName,
         authorAvatar: $globalUser.photoURL,
+        likes: [],
+        comments: 0,
       });
       title = "";
       content = "";

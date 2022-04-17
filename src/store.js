@@ -1,5 +1,13 @@
 import { writable } from "svelte/store";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import {
+  collection,
+  query,
+  onSnapshot,
+  orderBy,
+  limit,
+} from "firebase/firestore";
+import { db } from "./firebase";
 
 const auth = getAuth();
 // export const globalUser = writable(auth.currentUser);
